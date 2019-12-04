@@ -9,3 +9,5 @@ Write a function called that takes in an array and the value to be added. Return
 
 Solution
 https://github.com/AmyE29/python-data-structures-and-algorithms/blob/master/challenges/assets/array_shift.jpg
+
+https://github.com/AmyE29/python-data-structures-and-algorithms/tree/master/challenges/array_shift.py
