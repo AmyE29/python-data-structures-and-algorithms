@@ -19,6 +19,6 @@ https://github.com/AmyE29/python-data-structures-and-algorithms/blob/master/chal
 https://github.com/AmyE29/python-data-structures-and-algorithms/blob/master/challenges/array_binary_search/array_binary_search.py
 
 ## Change Log
-12-03-2019 8:17pm - Finished the app and it's working properly.
+12-04-2019 2:36pm - Finished the app and it's working properly.
 -->
 
