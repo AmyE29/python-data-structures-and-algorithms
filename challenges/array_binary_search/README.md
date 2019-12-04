@@ -4,7 +4,7 @@
 **Version**: 1.0.0
 
 ## Overview
-We have a sorted array and a value.  We would like to find the index of the value inside the array and return the nidex.
+We have a sorted array and a value.  We would like to find the index of the value inside the array and return the index.
 
 ## Architecture
 python  pipenv  Tested with Pytest
