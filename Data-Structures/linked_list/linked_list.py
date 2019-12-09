@@ -3,7 +3,7 @@ class Node(object):
     def __init__(self, data, next_node=None):
         self.data = data
         self.next_node = next_node
-    
+
     def __repr__(self):
         return self.data
 
@@ -19,10 +19,10 @@ class Node(object):
 class Linked_List:
     def __init__(self, head=None):
         self.head = head
-    
+
     def __repr__(self):
         return "linked list."
-    
+
     def __str__(self):
         """
         Returns string of values
