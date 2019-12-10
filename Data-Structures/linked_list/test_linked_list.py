@@ -59,13 +59,7 @@ def test_insert_after_front(empty_list):
   assert empty_list.insert_after(1, 2)
   assert empty_list.includes_node(2)
 
-# def test_value_TRUE(list_two):
-#     assert list_two.includes_node('Node_1') == True
 
-# def test_print_list(list_one):
-#     assert list_one.__str__() == "The values of this list are ['Node_1']. A total of 1 nodes."
-
-# @pytest.fixture()
 
 
 @pytest.fixture()
