@@ -1,24 +1,32 @@
-class Node(object):
+class Node():
 
-    def __init__(self, data, next_node=None):
-        self.data = data
-        self.next_node = next_node
+  def __init__(self, value = None, next_node = None):
+    self._value = value
+    self._next = next_node
 
-    def __repr__(self):
-        return self.data
+  def __str__(self):
+    return str(self._value)
 
-    def get_data(self):
-        return self.data
+  def set_value(self, value = None):
+    self._value = value
 
-    def get_next(self):
-        return self.next_node
+  def set_next(self, next_node = None):
+    if next_node == None or isinstance(next_node, Node):
+      self._next = next_node
+    else:
+      raise ValueError
 
-    def set_next(self, new_next):
-        self.next_node = new_next
+  def find_value(self):
+    return self._value
+
+  def find_next(self):
+    return self._next
+
 
 class Linked_List:
     def __init__(self, head=None):
         self.head = head
+        self._length = 0
 
     def __repr__(self):
         return "linked list."
@@ -27,34 +35,74 @@ class Linked_List:
         """
         Returns string of values
         """
-        data = self.return_list()
-        # return f"The values are {data}"
+        data = "The linked list is " + str(self._length) + " long"
 
-    def insert_node(self, data):
+        current = self.head
+        while current:
+            data += str (current)
+            current = current.find_next()
+        return data
+
+    def get_length(self):
+        """Returns the current length of the linked list"""
+        return self._length
+
+    def insert_node(self, value):
         """Inserts the data as a node """
-        new_node = Node(data)
-        new_node.set_next(self.head)
-        self.head = new_node
+        value = Node(value)
+        value.next = self.head
+        self.head = value
+
+        self._length += 1
+
 
     def includes_node(self, value):
         if not self.head:
             return False
         current = self.head
         while current:
-            if current.value == value:
+            if current.find_value == value:
                 return True
-            current = current.next
+            current = current.find_next()
         return False
 
-    def return_list(self):
-        try:
-            current = self.head
-            collection_of_values = []
-            while current:
-                collection_of_values.append(str(current))
-                current = current.next_node
-            return collection_of_values
 
-new_list = Linked_List()
-new_list.insert_node('Node_1')
-new_list.insert_node('Node_2')
+    def append_to_end (self, value):
+        if not self.head:
+            self.insert_node(value)
+            return
+        else:
+            current = self.head
+        while current.next:
+            current = current.next
+        current.next = Node(value)
+
+    def insert_after(self, search_value, new_value):
+        current = self.head
+        while current:
+            if current._value == search_value:
+                new_node = Node(new_value)
+                new_node.next = current.next
+                current.next = new_node
+                self._length += 1
+                return True
+            current = current.next
+        raise ValueError
+
+    def insert_before (self, search_value, new_value):
+        if not self.head:
+            raise ValueError
+        elif self.head.value == search_value:
+            self.insert_node(new_value)
+            return True
+        current = self.head
+        while current.next:
+            if current.next.value == search_value:
+                new_value = Node(new_value)
+                new_value.next = current.next
+                current.next = new_value
+                self._length += 1
+                return True
+            current = current.next
+        raise ValueError
+
