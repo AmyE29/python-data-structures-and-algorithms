@@ -1,32 +1,25 @@
-class Node():
+class Node:
 
   def __init__(self, value = None, next_node = None):
-    self._value = value
-    self._next = next_node
+    self.value = value
+    self.next = next_node
 
   def __str__(self):
-    return str(self._value)
+    return str(self.value)
 
   def set_value(self, value = None):
-    self._value = value
+    self.value = value
 
   def set_next(self, next_node = None):
     if next_node == None or isinstance(next_node, Node):
-      self._next = next_node
+      self.next = next_node
     else:
       raise ValueError
-
-  def find_value(self):
-    return self._value
-
-  def find_next(self):
-    return self._next
 
 
 class Linked_List:
     def __init__(self, head=None):
         self.head = head
-        self._length = 0
 
     def __repr__(self):
         return "linked list."
@@ -35,35 +28,27 @@ class Linked_List:
         """
         Returns string of values
         """
-        data = "The linked list is " + str(self._length) + " long"
-
+        as_string ='LinkedList :'
         current = self.head
         while current:
-            data += str (current)
-            current = current.find_next()
-        return data
+            as_string += f'[{current.next}] -> x'
+            current = current.next()
+        return as_string
 
-    def get_length(self):
-        """Returns the current length of the linked list"""
-        return self._length
 
     def insert_node(self, value):
         """Inserts the data as a node """
-        value = Node(value)
-        value.next = self.head
-        self.head = value
-
-        self._length += 1
-
+        node = Node(value, self.head)
+        self.head = node
 
     def includes_node(self, value):
         if not self.head:
             return False
         current = self.head
         while current:
-            if current.find_value == value:
+            if current.value == value:
                 return True
-            current = current.find_next()
+            current = current.next()
         return False
 
 
@@ -80,11 +65,10 @@ class Linked_List:
     def insert_after(self, search_value, new_value):
         current = self.head
         while current:
-            if current._value == search_value:
+            if current.value == search_value:
                 new_node = Node(new_value)
                 new_node.next = current.next
                 current.next = new_node
-                self._length += 1
                 return True
             current = current.next
         raise ValueError
@@ -101,8 +85,21 @@ class Linked_List:
                 new_value = Node(new_value)
                 new_value.next = current.next
                 current.next = new_value
-                self._length += 1
                 return True
             current = current.next
         raise ValueError
+
+    def kth_from_end (self, k):
+        current = self.head
+        temp = current
+        for i in range (0, k):
+            if temp.next:
+                temp = temp.next
+            else:
+                raise ValueError
+        while temp.next:
+            temp = temp.next
+            current = current.next
+        return current.data
+
 
