@@ -29,7 +29,7 @@ python  pipenv  Tested with Pytest
 
 ## Solution
 
-https://github.com/AmyE29/python-data-structures-and-algorithms/tree/master/Data-Structures/stack-and-queue
+https://github.com/AmyE29/python-data-structures-and-algorithms/blob/master/Data-Structures/stacks_and_queues/stacks_and_queues.py
 
 ## Change Log
 12-15-2019 9:41pm finished code
