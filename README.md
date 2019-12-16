@@ -9,7 +9,7 @@ Build Status
    * [array-reverse](https://github.com/AmyE29/python-data-structures-and-algorithms/tree/master/challenges/array_reverse)
    * [array-shift](https://github.com/AmyE29/python-data-structures-and-algorithms/tree/master/challenges/array_shift)
    * [array-binary-search](https://github.com/AmyE29/python-data-structures-and-algorithms/tree/master/challenges/array_binary_search)
-   * [ll-merge] (https://github.com/AmyE29/python-data-structures-and-algorithms/tree/master/challenges/ll_merge)
+   * [ll-merge](https://github.com/AmyE29/python-data-structures-and-algorithms/tree/master/challenges/ll_merge)
    
 #### [Data Structures](https://github.com/AmyE29/python-data-structures-and-algorithms/tree/master/Data-Structures)
    * [linked-lists](https://github.com/AmyE29/python-data-structures-and-algorithms/tree/master/Data-Structures/linked_list)
