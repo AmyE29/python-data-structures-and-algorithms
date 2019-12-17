@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 class Node:
     """
@@ -37,7 +36,6 @@ class Stack:
         except AttributeError:
             return None
 
-
     def peek(self):
         try:
             return self.top.value
@@ -51,49 +49,32 @@ class Stack:
         else:
             return False
 
-class Queue:
-    """
-    A Queue call that has a front property and created an empty Queue when instantiated
-    A method called enqueue which takes any value as an arguement and adds a new node with that value to the back of the queue
-    A method called dequeue that removes the node from the front of the queue and returns the nodes value
-    A method called peek that returns the value of the node located in the front of the queue without removing it from the queue
-    A method called is_empty that returns a True or False
-    """
-
-
-    def __init__(self, front=None):
-        self.front = front
-        self.end = None
+class PseudoQueue:
+    def __init__(self, stack1):
+        """this PseudoQueue class will implement the standard queue interface using 2 Stack objects. """
+        self.stack1 = Stack()
+        self.stack2 = Stack()
 
     def enqueue(self, value):
-        new_node = Node(value)
-        if self.end == None:
-            self.front = new_node
-            self.end = new_node
-        else:
-            self.end.next = new_node
-            self.end = new_node
+        """inserts value into the PseudoQueue, using a first-in, first-out approach.."""
+        self.stack1.push(value)
 
     def dequeue(self):
-        try:
-            first_node = self.front
-            self.front = first_node.next
-            first_node.next = None
-            return first_node.value
-        except AttributeError:
-            return None
+        """"extracts a value from the PseudoQueue, using a first-in, first-out approach. """
 
-    def peek(self):
-        try:
-            return self.front.value
-        except AttributeError:
-            return None
+        if self.stack1.top == None:
+            raise Exception
+        while self.stack1.top != None:
+            popped_value = self.stack1.pop()
 
-    def is_empty(self):
-        if self.front == None:
-            return True
-        else:
-            return False
+            self.stack2.push(popped_value)
+
+        stack2_popped = self.stack2.pop()
+
+        while self.stack2.top != None:
+            self.stack1.push(self.stack2.pop())
+        return stack2_popped
+
 
 if __name__ == "__main__":
     new_stack = Stack()
