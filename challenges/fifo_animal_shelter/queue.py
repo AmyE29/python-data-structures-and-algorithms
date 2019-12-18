@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 class Node:
     """
     Node class that has properties for the value stored in the Node, and a pointer to the next node.
@@ -36,6 +34,7 @@ class Stack:
             return top_node.value
         except AttributeError:
             return None
+
 
 
     def peek(self):
