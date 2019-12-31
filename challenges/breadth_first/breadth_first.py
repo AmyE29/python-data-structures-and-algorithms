@@ -16,7 +16,7 @@ class BinaryTree:
         if not self.root:
             self.root = node
             return
-            q = Queue()
+        q = Queue()
         q.enqueue(self.root)
         while not q.is_empty():
             current = q.dequeue()
