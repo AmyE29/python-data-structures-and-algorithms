@@ -17,8 +17,8 @@ def test_add_four():
     new_tree.add(5)
     assert new_tree.root.right.value == 5
     new_tree.add(2)
-    assert tree._root.left.left.value == 2
-    assert tree._root.left.right == None
+    assert new_tree.root.left.left.value == 2
+    assert new_tree.root.left.right == None
 
 def test_breadth_four():
     new_tree, expected = BinaryTree(), [2,7,5,2]
