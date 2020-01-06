@@ -15,8 +15,10 @@ Build Status
    * [max-tree] (https://github.com/AmyE29/python-data-structures-and-algorithms/tree/master/challenges/max-tree)
    * [fizz-buzz-tree](https://github.com/AmyE29/python-data-structures-and-algorithms/tree/master/challenges/fizz_buzz_tree)
    * [queue-with-stacks](https://github.com/AmyE29/python-data-structures-and-algorithms/tree/master/challenges/queue_with_stacks)
+
    
 #### [Data Structures](https://github.com/AmyE29/python-data-structures-and-algorithms/tree/master/Data-Structures)
    * [linked-lists](https://github.com/AmyE29/python-data-structures-and-algorithms/tree/master/Data-Structures/linked_list)
-   * [stack-and-queue]( https://github.com/AmyE29/python-data-structures-and-algorithms/blob/master/Data-Structures/stacks_and_queues)
    * [tree](https://github.com/AmyE29/python-data-structures-and-algorithms/tree/master/Data-Structures/tree)
+   * [stacks-and-queues](https://github.com/AmyE29/python-data-structures-and-algorithms/tree/master/Data-Structures/stacks_and_queues)
+
