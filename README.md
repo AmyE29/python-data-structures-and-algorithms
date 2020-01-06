@@ -12,7 +12,7 @@ Build Status
    * [ll-merge](https://github.com/AmyE29/python-data-structures-and-algorithms/tree/master/challenges/ll_merge)
    * [fifo-animal-shelter](https://github.com/AmyE29/python-data-structures-and-algorithms/tree/master/challenges/fifo_animal_shelter)
    * [breadth-first](https://github.com/AmyE29/python-data-structures-and-algorithms/tree/master/challenges/breadth_first)
-   * [max-tree] (https://github.com/AmyE29/python-data-structures-and-algorithms/tree/master/challenges/max-tree)
+   * [max-tree](https://github.com/AmyE29/python-data-structures-and-algorithms/tree/master/challenges/max-tree)
    * [fizz-buzz-tree](https://github.com/AmyE29/python-data-structures-and-algorithms/tree/master/challenges/fizz_buzz_tree)
    * [queue-with-stacks](https://github.com/AmyE29/python-data-structures-and-algorithms/tree/master/challenges/queue_with_stacks)
 
