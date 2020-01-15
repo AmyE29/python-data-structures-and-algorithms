@@ -30,15 +30,17 @@ The function would go through the following steps.
         [4, 8 , 23, 42, 16, 15]  
                          |
                         [16] #compares 16 to 42, inserts it in front
-        [4, 8 , 23, 16, 42, 15]                 |
-                    [16] #compares 16 to 23, inserts it in front
+        [4, 8 , 23, 16, 42, 15]  
+                     |
+                   [16] #compares 16 to 23, inserts it in front
         [4, 8 , 16, 23, 42, 15] 
                 |
                [16] # compares 16 to 8 and leaves in place             
          [4, 8 , 16, 23, 42, 15]   
                               |
                              [15] #compares 15 to 42, inserts it in front
-        [4, 8 , 16, 23, 15, 42]                    |
+        [4, 8 , 16, 23, 15, 42]   
+                        |
                        [15] #compares 15 to 23, inserts it in front
         [4, 8 , 16, 15, 23, 42] 
                     |
