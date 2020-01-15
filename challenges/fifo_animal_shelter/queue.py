@@ -35,8 +35,6 @@ class Stack:
         except AttributeError:
             return None
 
-
-
     def peek(self):
         try:
             return self.top.value

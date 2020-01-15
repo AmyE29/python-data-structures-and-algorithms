@@ -1,5 +1,6 @@
 import pytest
 from max_tree import BinaryTree
+
 def test_maximum_value():
     new_tree = BinaryTree()
     expected = 11
