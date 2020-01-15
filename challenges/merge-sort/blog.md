@@ -1,3 +1,4 @@
+
 #### Merge Sort: 
 Algorthim:
 1. Divide the list recursively into two halves until it can no longer be divided.
@@ -19,3 +20,4 @@ A visual example is:
             \                   /           
            [4, 8, 15, 16, 23, 42] #return sorted merged array
 </pre>
+
