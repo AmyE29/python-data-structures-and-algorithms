@@ -1,0 +1,7 @@
+{
+  "test_hastable.py::test_added": true, 
+  "test_hastable.py::test_collision": true, 
+  "test_hastable.py::test_collision_get": true, 
+  "test_hastable.py::test_get": true, 
+  "test_hastable.py::test_not_included": true
+}
