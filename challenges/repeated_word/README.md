@@ -13,3 +13,4 @@ The approach is to take the string and split it into individual words. Using Reg
 The efficency is O(N) for time and O(N) for space.
 
 #### Solution
+https://github.com/AmyE29/python-data-structures-and-algorithms/blob/master/challenges/assets/repeated_words.jpg
