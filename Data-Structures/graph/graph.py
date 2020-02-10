@@ -25,6 +25,22 @@ class Graph:
     def get_neighbors(self, vertex):
         return self._adjancency_list[vertex]
 
+    def get_edge(graph, lst):
+        includes = True
+        price = 0
+        for i in range(0, len(lst) - 1):
+            neighbors = graph.get_neighbors(lst[i])
+            for j in range(0, len(neighbors)):
+                if (neighbors[j][0].value) == (lst[i + 1].value):
+                    price += neighbors[j][1]
+                    includes = True
+                    break
+                else: 
+                    includes = False
+            if includes == False:
+                    return {False, '$0'}
+        return True
+
 class Vertex:
     def __init__(self, value):
         self.value = value

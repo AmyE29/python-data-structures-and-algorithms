@@ -61,3 +61,48 @@ def test_get_neighbors():
     assert neighbors[0][0].value == 'boot'
     assert isinstance(neighbors[0][0],Vertex)
     assert neighbors [0][1]== 6
+
+def test_get_many_neighbors():
+    graph = Graph()
+    shoe = graph.add_node('shoe')
+    boot = graph.add_node('boot')
+    sandal = graph.add_node('sandal')
+    flipflop = graph.add_node('flipflop')
+    graph.add_edge(shoe, boot, 6)
+    graph.add_edge(shoe, sandal, 5)
+    graph.add_edge(shoe, flipflop, 12)
+    graph.add_edge(boot, sandal, 5)
+    neighbors = graph.get_neighbors(shoe)
+    expected = [boot, 6 ,flipflop, 12, sandal, 5]
+    assert len(neighbors) ==3
+    assert neighbors[0][0].value == 'boot'
+    assert neighbors[1][0].value == 'sandal'
+    assert neighbors[2][0].value == 'flipflop'
+    assert isinstance(neighbors[0][0],Vertex)
+    assert neighbors [0][1]== 6
+    assert neighbors [1][1]== 5
+    assert neighbors [2][1]== 12
+
+def test_get_edges():
+    graph = Graph()
+    Pandora = graph.add_node('Pandora')
+    Arendell = graph.add_node('Arendell')
+    Monstropolis = graph.add_node('Monstropolis')
+    Naboo = graph.add_node('Naboo')
+    Narnia = graph.add_node('Narnia')
+    Metroville = graph.add_node('Metroville')
+    graph.add_edge(Pandora, Arendell, 150)
+    graph.add_edge(Pandora, Metroville, 82)
+    graph.add_edge(Arendell, Monstropolis, 99)
+    graph.add_edge(Arendell, Metroville, 42)
+    graph.add_edge(Monstropolis, Metroville, 105)
+    graph.add_edge(Monstropolis, Naboo, 73)
+    graph.add_edge(Metroville, Naboo, 26)
+    graph.add_edge(Metroville, Narnia, 37)
+    graph.add_edge(Naboo, Narnia, 250)
+    expected = [True, '$82']
+    actual =  graph.get_edge(Metroville)
+    assert actual == expected
+
+
+

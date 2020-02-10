@@ -1,1 +1,3 @@
-{}
+{
+  "test_graph.py::test_get_edges": true
+}
